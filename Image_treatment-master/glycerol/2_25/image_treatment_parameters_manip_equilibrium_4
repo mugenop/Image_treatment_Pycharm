@@ -1,0 +1,112 @@
+#############################################
+*fit_parameters:
+
+/circlefitthreshold is a parameter that allow to isolate the shape where a circular fit has to be performed.
+/it is a value between 0 and 1.
+/circlefitthreshold = 0.4
+circlefitthreshold = 0.4
+/Stiching is a parameter that allow to stich a circle shape to the detected shape that misses some parts (the ventouse part), this parameter is important to have a good fit.
+stiching = 5
+/Number of parameters to take into account when performing the fit.
+fit_parameters_nbr = 9
+max_external_parameters_value = 5000
+degree_polynomial = 6
+maxD_filter = 1
+
+*shape_parameters:
+/ballthreshold parameter allow to distinguish the ball from the ventouse in the image, it's a pixel value.
+ballthreshold = 58
+
+*image_treatment_parameters:
+/medianblur is a parameter used during the bluring that allow to get rid of small details in the image that would false the detection
+/Odd value.
+/medianblur1 for the ball
+medianblur1 = 3
+/medianblur2 for the ventouse
+medianblur2 = 5
+/gaussianthresh allow to thresh the image relatively to the neighboring pixels, it should stay low otherwise the shape is diluted.
+/Odd value.
+gaussianthresh = 3
+
+*file_name_parameters:
+D:\Documents\Footage\videos\
+_general_path_in =   D:\\Documents\\Footage\\videos\\Manip_finales\\Glycerol_100\\Ressort\\2_25\\Dynamic\\Manip_4\\
+_general_path_out =  D:\\Documents\\Footage\\videos\\Manip_finales\\Glycerol_100\\Ressort\\2_25\\Dynamic\\Manip_4\\Output\\
+_reference = converted_pressure_0.bmp
+
+*buckling_isotropic:
+_b_isotropic_path_in = Forward\\Isotropic\\Registered\\
+_b_isotropic_path_out= Forward\\Isotropic\\Registered\\
+_b_isotropic_image_out = pressure_
+_b_isotropic_format_out = .bmp
+_b_isotropic_time = 0_200_20
+_b_isotropic_pressure = 0_100_10
+b_isotropic_canny_a = 496
+b_isotropic_canny_b = 496
+
+*buckling:
+_buckling_path_in = Forward\\Buckling\\Equilibrium_state\\Registered\\
+_buckling_path_out = Forward\\Buckling\\Equilibrium_state\\Registered\\
+_buckling_image_in = buckling_1
+_buckling_image_out = buckling_
+_buckling_format_in = .bmp
+_buckling_format_out = .bmp
+_buckling_time = -2_-1_1,2_3_1,300_301_1
+_buckling_pressure = 100
+_buckling_concavity = 1_2_4
+buckling_epsilon = -9
+buckling_canny_a = 23
+buckling_canny_b = 23
+
+concavity_offset = 50
+concavity_y_negative_offset = 60
+concavity_shrinker= 0.4
+clipLimit= 1
+tileGridSize_a = 2
+tileGridSize_b = 2
+
+
+*debuckling:
+_debuckling_path_in = Backward\\Debuckling\\Equilibrium_state\\Registered\\
+_debuckling_path_out = Backward\\Debuckling\\Equilibrium_state\\Registered\\
+_debuckling_image_in = Debuckling_
+_debuckling_image_out = Debuckling_
+_debuckling_format_in = .bmp
+_debuckling_format_out = .bmp
+_debuckling_time = -2_-1_1,2_3_1,300_301_1
+_debuckling_pressure = 70
+_debuckling_concavity = 4_2_1
+debuckling_epsilon = -9
+debuckling_canny_a = 23
+debuckling_canny_b = 23
+
+*debuckling_isotropic:
+_db_isotropic_path_in = Backward\\Isotropic\\Registered\\
+_db_isotropic_path_out = Backward\\Isotropic\\Registered\\
+_db_isotropic_image_in = pressure_
+_db_isotropic_image_out = pressure_
+_db_isotropic_format_in = .jpg
+_db_isotropic_format_out = .bmp
+_db_isotropic_time = 0_140_20
+_db_isotropic_pressure = 0_70_-10
+
+_manip_name = manip_4_Equilibrium_
+
+*crop_parameters:
+1crop_x0 = 40
+1crop_y0 = 10
+1crop_h = 470
+1crop_w = 320
+
+
+*physical terms:
+/79.669 px # 9.9 mm
+/1 px # 9.9/79.669 * 10-3 m
+conversion =  0.00016287196078431372549019607843137
+shell_thickness = 0.002
+shell_volume = 0.000014484836528151340024805094425841
+internal_volume = 0.000050962
+internal_pressure = 101300
+
+
+
