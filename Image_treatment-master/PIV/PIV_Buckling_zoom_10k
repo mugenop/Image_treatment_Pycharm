@@ -1,0 +1,69 @@
+/filters:
+
+gaussian_blur_init =3
+canny_init_a =10
+canny_init_b =10
+height_ratio =0.3
+
+/crop
+
+density_thresh_h = 0.15
+blocksize_x_h=100
+blocksize_y_h=100
+step_h=1
+offset_h=100
+
+density_thresh_v=0.15
+blocksize_x_v=25
+blocksize_y_v=5
+step_v=1
+offset_v=40
+x_v = -1
+
+/A/B images
+
+gaussian_blur_a=3
+thresh_adaptive_level_a=3
+thresh_adaptive_sigma_a=3
+filter_blocksize_a=5
+density_threshold=5
+canny_a_a = 25
+canny_b_a = 10
+x_offset_a=-60
+savgol_window_size_a=101
+pol_order_a=1
+array_a_x_offset=70
+gaussian_blur_b=5
+thresh_adaptive_level_b=3
+thresh_adaptive_sigma_b=3
+filter_blocksize_b=5
+density_threshold=5
+x_offset_b=-60
+canny_a_b = 50
+canny_b_b = 0
+savgol_window_size_b=101
+pol_order_b=1
+
+
+gaussian_blur_whole=3
+thresh_adaptive_level_whole=3
+thresh_adaptive_sigma_whole=3
+canny_a_whole=100
+canny_b_whole=10
+filter_blocksize=10
+density_threshold=5
+x_offset_whole=-0
+savgol_window_size_whole=151
+pol_order_whole=3
+
+_concavity = 1_3300_16531
+fit_parameters_nbr_whole = 1
+fit_parameters_nbr_separated = 3
+max_external_parameters_value = 600
+min_external_parameters_value = -100
+crop_x0=500
+crop_y0=0
+crop_h=430
+crop_w=735
+_image_input = D:\\Documents\\PIV\\Buckling_zoom_FPS10k\\
+_image_output = D:\\Documents\\PIV\\Output\\Buckling_zoom_FPS10k\\
